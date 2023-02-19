@@ -278,3 +278,4 @@ poetry.toml
 
 .DS_Store
 .idea
+.allure-results
