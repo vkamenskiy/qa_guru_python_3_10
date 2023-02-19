@@ -2,7 +2,6 @@ import datetime
 import allure
 from qa_guru_python_3_10.model.pages.practice_form import practice_form
 from qa_guru_python_3_10.model.data.user import User
-from qa_guru_python_3_10.utils import attach
 
 
 def test_successful_submit_student_registration_form():
@@ -14,11 +13,6 @@ def test_successful_submit_student_registration_form():
 
     with allure.step("Check form results"):
         practice_form.assert_submitted(Vlad)
-
-    attach.add_html(browser)
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
-    attach.add_video(browser)
 
 
 Vlad = User(
