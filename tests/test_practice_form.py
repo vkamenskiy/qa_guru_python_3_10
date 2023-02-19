@@ -1,15 +1,18 @@
 import datetime
-
+import allure
 from qa_guru_python_3_10.model.pages.practice_form import practice_form
 from qa_guru_python_3_10.model.data.user import User
 
 
 def test_successful_submit_student_registration_form():
-    practice_form.given_opened()
+    with allure.step("Open registration form"):
+        practice_form.given_opened()
 
-    practice_form.fill_student(Vlad).submit_form()
+    with allure.step("Fill form"):
+        practice_form.fill_student(Vlad).submit_form()
 
-    practice_form.assert_submitted(Vlad)
+    with allure.step("Check form results"):
+        practice_form.assert_submitted(Vlad)
 
 
 Vlad = User(
