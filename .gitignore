@@ -278,4 +278,4 @@ poetry.toml
 
 .DS_Store
 .idea
-.allure-results
+/tests/demoqa/allure-results/
